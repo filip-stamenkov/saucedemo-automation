@@ -1,4 +1,5 @@
 import shoppingList from '../fixtures/shoppingList.json'
+import loginPage from '../pages/login.js'
 
 describe('Test scenarios to verify when a standard user logs in.', () => {
 
@@ -10,7 +11,7 @@ describe('Test scenarios to verify when a standard user logs in.', () => {
     loginPage.verifyLoggedIn()
   });
 
-  it.only('Should succesfully login, add to cart, verify quantity and option to remove.', () => {
+  it('Should succesfully login, add to cart, verify quantity and option to remove.', () => {
     cy.login(username, password)
     loginPage.verifyLoggedIn()
     cy.populateCart(shoppingList)
