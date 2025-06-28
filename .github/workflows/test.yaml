@@ -22,6 +22,7 @@ jobs:
         uses: cypress-io/github-action@v6
         env:
             CYPRESS_username: ${{ secrets.VALID_USERNAME }}
+            CYPRESS_lockedUsername: ${{ secrets.LOCKED_USERNAME }}
             CYPRESS_password: ${{ secrets.PASSWORD }}
         with:
           command: npx cypress run --spec "cypress/e2e/*.cy.{js,ts}"

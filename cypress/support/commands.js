@@ -8,7 +8,6 @@ Cypress.Commands.add('login', (username, password) => {
     loginPage.elements.username().type(username)
     loginPage.elements.password().type(password)
     loginPage.elements.loginBtn().click()
-    loginPage.verifyLoggedIn()
 
  })
 

@@ -7,10 +7,12 @@ describe('Test scenarios to verify when a standard user logs in.', () => {
   
   it('Should succesfully login and verify the page.', () => {
     cy.login(username, password)
+    loginPage.verifyLoggedIn()
   });
 
   it.only('Should succesfully login, add to cart, verify quantity and option to remove.', () => {
     cy.login(username, password)
+    loginPage.verifyLoggedIn()
     cy.populateCart(shoppingList)
   });
 
