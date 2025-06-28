@@ -1,8 +1,19 @@
 {
-  "backpack": false,
-  "bike-light": false,
-  "bolt-t-shirt": true,
-  "fleece-jacket": false,
-  "onesie": false,
-  "t-shirt-(red)": false
+  "positiveScenario": {
+    "backpack": false,
+    "bike-light": false,
+    "bolt-t-shirt": true,
+    "fleece-jacket": false,
+    "onesie": false,
+    "t-shirt-(red)": false
+  },
+  "errorScenario": {
+    "backpack": false,
+    "bike-light": false,
+    "bolt-t-shirt": true,
+    "fleece-jacket": true,
+    "onesie": false,
+    "t-shirt-(red)": false
+  }
 }
+
