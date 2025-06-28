@@ -10,7 +10,7 @@
   "errorScenario": {
     "backpack": false,
     "bike-light": false,
-    "bolt-t-shirt": true,
+    "bolt-t-shirt": false,
     "fleece-jacket": true,
     "onesie": false,
     "t-shirt-(red)": false
