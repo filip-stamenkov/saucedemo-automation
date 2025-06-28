@@ -1,7 +1,6 @@
 import loginPage from "../pages/login.js"
 import shopPage from "../pages/shop.js"
 
-
 Cypress.Commands.add('login', (username, password) => { 
 
     loginPage.visitPage()
@@ -10,7 +9,6 @@ Cypress.Commands.add('login', (username, password) => {
     loginPage.elements.loginBtn().click()
 
  })
-
 
  Cypress.Commands.add('populateCart', (list) => {
 
@@ -32,5 +30,13 @@ Cypress.Commands.add('login', (username, password) => {
         } else {
             shopPage.elements.cartBadge().should('not.exist');
         }
+
+ })
+
+ Cypress.Commands.add('negativeScenarioHandler', () => {
+
+    cy.on('fail', () => {
+            return false
+        })
 
  })
