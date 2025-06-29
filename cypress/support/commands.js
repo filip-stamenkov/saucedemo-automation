@@ -2,10 +2,13 @@ import loginPage from "../pages/login.js"
 import shopPage from "../pages/shop.js"
 
 Cypress.Commands.add('login', (username, password) => { 
+    
+    expect(username).to.be.a('string').and.not.be.empty
+    expect(password).to.be.a('string').and.not.be.empty
 
     loginPage.visitPage()
     loginPage.elements.username().type(username)
-    loginPage.elements.password().type(password)
+    loginPage.elements.password().type(password, { log: false })
     loginPage.elements.loginBtn().click()
 
  })
