@@ -16,22 +16,19 @@ Cypress.Commands.add('login', (username, password) => {
  Cypress.Commands.add('populateCart', (list) => {
 
         const buyItems = Object.keys(list).filter(key => list[key] === true);
-        if (buyItems.length === 1) {
-            shopPage.elements.addItemToCartBtn(buyItems).click();
-            shopPage.elements.removeItemBtn(buyItems).should('be.visible');
-        } else if (buyItems.length > 1) {
+        if (buyItems.length){
             buyItems.forEach(item => {
-                shopPage.elements.addItemToCartBtn(item).click();
-                shopPage.elements.removeItemBtn(item).should('be.visible');
+                shopPage.addItemToCart(item)
+                shopPage.removeItemFromCartBtnVisible(item);
             });
         } else {
             cy.log('No items to add to cart');
         }
 
-        if(buyItems.length > 0) {
-            shopPage.elements.cartBadge().should('have.text', buyItems.length);
+        if(buyItems.length) {
+            shopPage.verifyCartQuantity(buyItems.length);
         } else {
-            shopPage.elements.cartBadge().should('not.exist');
+            shopPage.verifyCartQuantityEmpty();
         }
 
  })
