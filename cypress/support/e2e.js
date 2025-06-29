@@ -15,14 +15,3 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-
-// Cypress.on('uncaught:exception', (err, runnable) => {
-
-//   console.log(err.message)
-//   if (err.message.to.include('Failed to add item to the cart.')) {
-    
-//     done()
-//     return false
-//   }
-
-// })
