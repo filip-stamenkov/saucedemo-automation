@@ -7,11 +7,18 @@ class shopPage {
         itemImage:(item) => cy.get(`[data-test="inventory-item-sauce-labs-${item}-img"]`)
     }
 
-    verifyItemImage(list) {
+    verifyCorrectItemImage(list) {
         const problemItem = Object.keys(list).filter(key => list[key] === true);
         this.elements.itemImage(problemItem).should('be.visible')
             .and('have.attr', 'src')
             .and('include', `${problemItem}`);
+    }
+
+    verifyIncorrectItemImage(list) {
+        const problemItem = Object.keys(list).filter(key => list[key] === true);
+        this.elements.itemImage(problemItem).should('be.visible')
+            .and('have.attr', 'src')
+            .and('not.include', `${problemItem}`);
     }
 }
 
