@@ -1,3 +1,5 @@
+import shopPage from '../pages/shop.js'
+import {URLs} from '../support/urls.js'
 class loginPage {
 
     elements ={
@@ -9,11 +11,13 @@ class loginPage {
 
     visitPage() {
         cy.visit('/')
-        cy.url().should('eq', 'https://www.saucedemo.com/')
+        cy.url().should('eq', URLs.base)
     }
 
     verifyLoggedIn() {
-        cy.url().should('contain', '/inventory.html')
+        cy.url().should('eq', URLs.home)
+        shopPage.elements.burgerMenu().should('be.visible')
+        shopPage.elements.shoppingCart().should('be.visible')
     }
 
     verifyLoginErrorVisible() {
