@@ -1,5 +1,6 @@
 import loginPage from '../pages/login.js'
 import shopPage from '../pages/shop.js'
+import shoppingList from '../fixtures/shoppingList.json'
 
 describe('Test scenarios to verify when a problem user logs in.', () => {
 
@@ -10,7 +11,7 @@ describe('Test scenarios to verify when a problem user logs in.', () => {
     cy.negativeScenarioHandler()
     cy.login(username, password)
     loginPage.verifyLoggedIn()
-    shopPage.verifyItemImage('onesie')
+    shopPage.verifyItemImage(shoppingList.problemScenario)
   });
 
 });

@@ -7,10 +7,11 @@ class shopPage {
         itemImage:(item) => cy.get(`[data-test="inventory-item-sauce-labs-${item}-img"]`)
     }
 
-    verifyItemImage(item) {
-        this.elements.itemImage(item).should('be.visible')
+    verifyItemImage(list) {
+        const problemItem = Object.keys(list).filter(key => list[key] === true);
+        this.elements.itemImage(problemItem).should('be.visible')
             .and('have.attr', 'src')
-            .and('include', `${item}`);
+            .and('include', `${problemItem}`);
     }
 }
 

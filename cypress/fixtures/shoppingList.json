@@ -14,6 +14,14 @@
     "fleece-jacket": true,
     "onesie": false,
     "t-shirt-(red)": false
+  },
+  "problemScenario": {
+    "backpack": false,
+    "bike-light": false,
+    "bolt-t-shirt": false,
+    "fleece-jacket": false,
+    "onesie": true,
+    "t-shirt-(red)": false
   }
 }
 
