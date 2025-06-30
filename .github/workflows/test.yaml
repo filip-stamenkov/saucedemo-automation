@@ -27,4 +27,4 @@ jobs:
             CYPRESS_lockedUsername: ${{ secrets.LOCKED_USERNAME }}
             CYPRESS_password: ${{ secrets.PASSWORD }}
         with:
-          command: npx cypress run --spec "cypress/e2e/*.cy.{js,ts}"
+          command: npx cypress run --spec "cypress/e2e/*.cy.js"

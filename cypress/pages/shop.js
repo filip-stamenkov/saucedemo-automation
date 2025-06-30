@@ -4,9 +4,9 @@ class shopPage {
         burgerMenu:() => cy.get('#react-burger-menu-btn'),
         shoppingCart:() => cy.get('[data-test="shopping-cart-link"]'),
         cartBadge:() => cy.get('[data-test="shopping-cart-badge"]'),
-        addItemToCartBtn:(item) => cy.get(`[data-test="add-to-cart-sauce-labs-${item}"]`),
-        removeItemBtn:(item) => cy.get(`[data-test="remove-sauce-labs-${item}"]`),
-        itemImage:(item) => cy.get(`[data-test="inventory-item-sauce-labs-${item}-img"]`)
+        addItemToCartBtn:(item) => cy.get(`[data-test="add-to-cart-${item}"]`),
+        removeItemBtn:(item) => cy.get(`[data-test="remove-${item}"]`),
+        itemImage:(item) => cy.get(`[data-test="inventory-item-${item}-img"]`)
     }
 
     verifyCartQuantity(number) {

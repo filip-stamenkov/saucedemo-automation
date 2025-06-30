@@ -1,27 +1,27 @@
 {
   "positiveScenario": {
-    "backpack": false,
-    "bike-light": false,
-    "bolt-t-shirt": true,
-    "fleece-jacket": false,
-    "onesie": false,
-    "t-shirt-(red)": false
+    "sauce-labs-backpack": false,
+    "sauce-labs-bike-light": false,
+    "sauce-labs-bolt-t-shirt": true,
+    "sauce-labs-fleece-jacket": false,
+    "sauce-labs-onesie": false,
+    "test.allthethings()-t-shirt-(red)": false
   },
   "errorScenario": {
-    "backpack": false,
-    "bike-light": false,
-    "bolt-t-shirt": false,
-    "fleece-jacket": true,
-    "onesie": false,
-    "t-shirt-(red)": false
+    "sauce-labs-backpack": false,
+    "sauce-labs-bike-light": false,
+    "sauce-labs-bolt-t-shirt": false,
+    "sauce-labs-fleece-jacket": true,
+    "sauce-labs-onesie": false,
+    "test.allthethings()-t-shirt-(red)": false
   },
   "problemScenario": {
-    "backpack": false,
-    "bike-light": false,
-    "bolt-t-shirt": false,
-    "fleece-jacket": false,
-    "onesie": true,
-    "t-shirt-(red)": false
+    "sauce-labs-backpack": false,
+    "sauce-labs-bike-light": false,
+    "sauce-labs-bolt-t-shirt": false,
+    "sauce-labs-fleece-jacket": false,
+    "sauce-labs-onesie": true,
+    "test.allthethings()-t-shirt-(red)": false
   }
 }
 
